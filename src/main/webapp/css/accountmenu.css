@@ -1,0 +1,37 @@
+@media screen and (max-width: 991px) {
+  .account-menu {
+    display: block; }
+    .account-menu ul {
+      display: block; }
+  .account-form {
+    display: block; } }
+
+@media screen and (min-width: 992px) {
+  .account-menu {
+    display: inline-block; }
+    .account-menu ul {
+      display: inline-block; }
+  .account-form {
+    display: inline-block; } }
+
+.account-main {
+  width: 80%;
+  margin: auto;
+  text-align: center; }
+
+.account-menu {
+  vertical-align: top; }
+  .account-menu ul {
+    display: inline-block;
+    padding-top: 20px;
+    padding-right: 60px;
+    padding-left: 0px;
+    vertical-align: top; }
+    .account-menu ul li {
+      padding: 5px;
+      list-style-type: none; }
+      .account-menu ul li a {
+        color: #7B718E; }
+      .account-menu ul li .acc-menu-active {
+        color: #4a4455;
+        font-weight: bold; }

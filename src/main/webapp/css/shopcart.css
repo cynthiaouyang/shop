@@ -1,0 +1,31 @@
+.f-cart {
+  width: 85%;
+  margin: auto; }
+  .f-cart > h3 {
+    margin-top: 20px;
+    margin-bottom: 20px; }
+  .f-cart tr > th {
+    border-top: none; }
+  .f-cart tr > td {
+    color: #7B718E;
+    font-size: 0.8em; }
+    .f-cart tr > td > div {
+      display: inline-block;
+      position: relative;
+      top: -20px;
+      left: 20px; }
+      .f-cart tr > td > div > a {
+        font-size: 1.5em;
+        color: #625a72; }
+      .f-cart tr > td > div > div > a {
+        color: #7B718E;
+        font-size: 0.9em; }
+  .f-cart tr > .bottom-total {
+    padding-top: 45px; }
+    .f-cart tr > .bottom-total > span {
+      font-size: 1.3em;
+      margin-left: 30px;
+      font-weight: bold; }
+      .f-cart tr > .bottom-total > span > span {
+        color: #ff4d4d;
+        margin-left: 7px; }

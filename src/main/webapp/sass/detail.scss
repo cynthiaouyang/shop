@@ -1,0 +1,142 @@
+@import "root";
+// @import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+@media screen and (min-width:768px) {
+    .detail-pics {
+        text-align: right;
+        padding-right: 20px;
+    }
+}
+
+@media screen and(max-width:991px) {
+    .detail-comment {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width:992px) {
+    .detail-comment {
+        width: 70%;
+    }
+}
+
+.detail-main {
+    width: 90%;
+    margin: auto;
+    margin: 20px;
+    >:nth-child(2) {
+        >div {
+            margin: 20px 15px 20px 15px;
+        }
+        >.mar-left {
+            margin-left: 23px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+        .d-sold {
+            margin-left: 60px;
+            color: $logo-color;
+        }
+        .d-detail {
+            color: $logo-color;
+            line-height: 2;
+            margin-top: 20px;
+        }
+    }
+}
+
+input[type=radio],input[type=checkbox] {
+    opacity: 0;
+    margin-right: -40px;
+    transform: scale(2);
+    &:hover {
+        cursor: pointer;
+    }
+    &+ label {
+        height: 28px;
+        width: 28px;
+        display: inline-block;
+        text-align: center;
+        margin: 10px 15px 10px 15px;
+        font-size: 0.7em;
+        padding-top: 4px;
+        border-radius: 3px;
+    }
+    &:checked + label,
+    &:hover + label {
+        box-shadow: 0px 0px 7px 0px rgba($logo-color, 10%);
+        border: 2px solid rgba($logo-color, 10%);
+    }
+}
+
+.g-red {
+    background-color: red;
+}
+
+.g-yellow {
+    background-color: yellow;
+}
+
+.g-pink {
+    background-color: pink;
+}
+
+.g-white {
+    background-color: white;
+}
+
+.g-orange {
+    background-color: orange;
+}
+
+.g-blue {
+    background-color: blue;
+}
+
+.g-green {
+    background-color: green;
+}
+
+.g-black {
+    background-color: black;
+}
+
+.g-purple {
+    background-color: purple;
+}
+
+.g-grey {
+    background-color: grey;
+}
+
+
+.detail-comment {
+    margin: auto;
+    color: lighten($logo-color,5%);
+    >div {
+        border-bottom: 1px solid lighten($logo-color, 35%);
+        >div {
+            padding: 5px;
+            >div>textarea {
+                width: 100%;
+                margin-top: 10px;
+            }
+            &:nth-child(1),
+            &:nth-child(3) {
+                >div {
+                    display: inline-block;
+                    &:last-child {
+                        float: right;
+                    }
+                }
+            }
+        }
+        >.detail-replys {
+            display: none;
+            >div {
+                padding-top: 5px;
+                border-top: 1px dotted lighten($logo-color, 40%);
+            }
+        }
+    }
+    padding-top:10px;
+}

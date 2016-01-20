@@ -1,0 +1,15 @@
+$bg-color:#EEEEEE;
+$logo-color:#7B718E;
+// $bg-color:#ffb3d9;
+// $logo-color:#e60073;
+//originColor,finalColor: rgba(46, 184, 230, 1)
+@mixin gradient2Color($originColor, $finalColor,$percent) {
+    background: $originColor;
+    // background: -moz-linear-gradient(top, rgba(46, 184, 230, 1) 0%, rgba(255, 255, 255, 0.39) 5%);
+    // background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(46, 184, 230, 1)), color-stop(5%, rgba(255, 255, 255, 0.39)));
+    // background: -webkit-linear-gradient(top, rgba(46, 184, 230, 1) 0%, rgba(255, 255, 255, 0.39) 5%);
+    // background: -o-linear-gradient(top, rgba(46, 184, 230, 1) 0%, rgba(255, 255, 255, 0.39) 5%);
+    // background: -ms-linear-gradient(top, rgba(46, 184, 230, 1) 0%, rgba(255, 255, 255, 0.39) 5%);
+    background: linear-gradient(to bottom, $originColor, $finalColor $percent);
+    // filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#2eb8e6', endColorstr='#ffffff', GradientType=0);
+} 

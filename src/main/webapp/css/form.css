@@ -1,0 +1,102 @@
+@media screen and (max-width: 500px) {
+  .mall-form {
+    width: 100%; } }
+
+@media screen and (min-width: 501px) {
+  .mall-form {
+    width: 450px; } }
+
+.mall-form {
+  padding: 25px;
+  margin: 0 auto;
+  margin-top: 20px;
+  border: 1px solid #887f99;
+  background: #EEEEEE;
+  background: linear-gradient(to bottom, #EEEEEE, #a39cb0 90%);
+  color: #7B718E;
+  /* For IE8 and earlier */ }
+  .mall-form > header {
+    font-size: 1.5em;
+    text-align: center; }
+  .mall-form .error-msg {
+    color: #ff3333; }
+  .mall-form > footer {
+    margin-top: 20px; }
+  .mall-form > div {
+    margin: 5px;
+    text-align: left; }
+    .mall-form > div > div {
+      text-transform: uppercase; }
+      .mall-form > div > div:nth-child(odd) {
+        margin-top: 10px;
+        margin-bottom: 10px; }
+      .mall-form > div > div:nth-child(even) {
+        font-size: 1.5em;
+        margin-bottom: 10px; }
+      .mall-form > div > div > input {
+        width: 90%;
+        font-size: 0.6em;
+        padding: 5px;
+        line-height: 1.5;
+        background-color: #fbfbfb; }
+        .mall-form > div > div > input::-webkit-input-placeholder {
+          font-size: 0.8em;
+          padding: 2px;
+          text-transform: uppercase; }
+        .mall-form > div > div > input:-webkit-autofill {
+          background-color: #fbfbfb; }
+    .mall-form > div .f-combobox {
+      width: 90%;
+      font-size: 0.6em;
+      padding: 5px; }
+  .mall-form .f-radio > span {
+    font-size: 0.6em;
+    margin-right: 20px;
+    font-weight: none; }
+
+.form-input-outline, .mall-form > div > div > input, .mall-form > div .f-combobox, .form-btn {
+  border: 1px solid #958da5;
+  box-shadow: 0px 0px 17px 0px #7b718e; }
+
+.form-btn {
+  margin-left: 5px;
+  margin-right: 10px;
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+  padding: 1px;
+  font-weight: bold;
+  color: #7B718E;
+  background-color: #EEEEEE; }
+
+.form-btn:hover {
+  border: 1px solid #625a72;
+  color: #625a72;
+  background-color: #d5d5d5; }
+
+em.hint {
+  text-align: left;
+  color: #ff3333;
+  margin-top: 8px;
+  font-size: 18px; }
+
+em {
+  font-size: 14px; }
+
+.init {
+  display: block;
+  color: white; }
+
+em.error {
+  display: block;
+  color: #ff3333; }
+
+em.error-img {
+  margin-left: 5px;
+  background: url(../images/no.png) no-repeat 0px 0px;
+  padding-left: 16px; }
+
+em.success-img {
+  margin-left: 5px;
+  background: url(../images/yes.png) no-repeat 0px 0px;
+  padding-left: 16px; }
