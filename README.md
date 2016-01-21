@@ -6,7 +6,9 @@ Shopping website
 This website build up with java and use Spring Hibernate and Struts framework with jsp, html5, css3, bootstrap, jquery, javascript, jstl, MySQL
 
 ```
-The website is deploy on http://shop-cynthia.rhcloud.com/
+The website is deployed at:
+
+http://shop-cynthia.rhcloud.com/
 ```
 
 
