@@ -1,0 +1,69 @@
+@import 'root';
+.main-content {
+    text-align: center;
+    width: 90%;
+    padding: 20px;
+    margin: auto;
+    background-color: lighten($bg-color, 5%);
+}
+
+.main-pic {
+    transition-duration: 2s;
+    &:hover {
+        transform: scale(0.9, 0.9);
+        a {
+            opacity: 0.4;
+        }
+        span {
+            opacity: 1;
+        }
+    }
+}
+ 
+.main-pic-content {
+    position: relative;
+}
+
+.main-pic-content>span {
+    position: absolute;
+    top: -100px;
+    left: 50%;
+    color: $logo-color;
+    opacity: 0;
+    transition: opacity 1s linear;
+}
+
+
+
+// .main-bottom {
+//     position: relative;
+//     height: 500px;
+//     >div {
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         right: 0;
+//         bottom: 0;
+//         z-index: -1;
+//         >img {
+//             // height: 500px;
+//             // position: absolute;
+//             // left: 50%;
+//             // bottom: 0;
+//             // top: 0;
+//             // min-width: 100%;
+//             // min-height: 100%;
+//             // background-position: center center;
+//             // transform: translate3d(-50%, 60px, 0px);
+//             // background-size: cover;
+//                 // display: none;
+//     position: absolute;
+//     left: 50%;
+//     bottom: 0;
+//     min-width: 100%;
+//     min-height: 100%;
+//        transform: translate3d(-50%, 184px, 0px);
+//         }
+//     }
+// }
+

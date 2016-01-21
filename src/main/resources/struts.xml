@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+
+	<struts>
+		<constant name="struts.devMode" value="true"></constant>
+        <constant name="struts.i18n.encoding" value="UTF-8"/> 
+	<package name="mainPackage" namespace="" extends="json-default">
+		<interceptors>
+			<interceptor name="loginInterceptor"
+				class="com.project.shop.interceptor.LoginInterceptor">
+			</interceptor>
+			<interceptor-stack name="loginStack">
+				<interceptor-ref name="loginInterceptor" >
+				 <param name="excludeMethods">getList,sendOrder,register</param>  
+				</interceptor-ref>
+				<interceptor-ref name="defaultStack" />
+			</interceptor-stack>
+		</interceptors>
+		<global-results>
+			<result name="login">/jsps/admin/admin_login.jsp</result>
+			<result name="invalid.token">/jsps/comms/token.jsp</result>
+		</global-results>
+		<global-exception-mappings>
+			<exception-mapping result="exception"
+				exception="java.Lang.Exception">
+			</exception-mapping>
+		</global-exception-mappings>
+	</package>
+		<package name="addrBook" namespace="" extends="mainPackage">
+			<global-results>
+				<result name="index">/index.jsp</result>
+				<result name="exception">/jsps/exception.jsp</result>
+				<result name="main">/jsps/main.jsp</result>
+				<result name="pay">/jsps/member/goods/pay.jsp</result>
+				<result name="addrBook">/jsps/member/message/addrbook.jsp</result>
+			</global-results>
+			<global-exception-mappings>
+				<exception-mapping result="exception" exception="java.Lang.Exception"></exception-mapping>
+			</global-exception-mappings>
+			
+		</package>
+		<package name="category" namespace="" extends="mainPackage">
+			<global-results>
+				<result name="index">/index.jsp</result>
+				<result name="exception">/jsps/exception.jsp</result>
+				<result name="main">/jsps/main.jsp</result>				
+				<result name="list">/jsps/admin/category/list.jsp</result>				
+				<result name="operate">/jsps/admin/category/operate.jsp</result>
+			</global-results>
+			<global-exception-mappings>
+				<exception-mapping result="exception" exception="java.Lang.Exception"></exception-mapping>
+			</global-exception-mappings>
+			
+		</package>
+		
+		<package name="employee" namespace="" extends="mainPackage">
+		<!-- 
+			<interceptors>	
+				<interceptor name="login" class="com.graduation.project.hui.interceptor.LoginInterceptor"/>
+				<interceptor-stack name="loginStack">
+					<interceptor-ref name="defaultStack"/>
+					<interceptor-ref name="login"/>
+				</interceptor-stack>
+			</interceptors>
+		 -->	
+			<global-results>
+				<result name="index">/index.jsp</result>
+				<result name="exception">/jsps/exception.jsp</result>
+				<result name="main">/jsps/admin/admin_main.jsp</result>
+				<result name="addEmp">/jsps/admin/employee/insert.jsp</result>
+				<result name="list">/jsps/admin/employee/list.jsp</result>
+				<result name="login">/jsps/admin/admin_login.jsp</result>
+				<result name="preUpt">/jsps/admin/employee/edit.jsp</result>
+			</global-results>
+			<global-exception-mappings>
+				<exception-mapping result="exception" exception="java.Lang.Exception"></exception-mapping>
+			</global-exception-mappings>
+			
+		</package>
+		
+		<package name="goods" namespace="" extends="mainPackage">
+			<global-results>
+				<result name="index">/index.jsp</result>
+				<result name="exception">/jsps/exception.jsp</result>
+				<result name="main">/jsps/main.jsp</result>							
+				<result name="operate">/jsps/admin/goods/operate.jsp</result>
+				<result name="mainlist">/jsps/member/goods/list.jsp</result>		
+				<result name="list">/jsps/admin/goods/list.jsp</result>		
+				<result name="detail">/jsps/member/goods/detail.jsp</result>
+				<result name="preUptPwd">/jsps/member/message/uptPwd.jsp</result>		
+			</global-results>
+			<global-exception-mappings>
+				<exception-mapping result="exception" exception="java.Lang.Exception"></exception-mapping>
+			</global-exception-mappings>
+			
+		</package>
+		
+		<package name="goodsComment" namespace="" extends="mainPackage">
+			<global-results>
+				<result name="index">/index.jsp</result>
+				<result name="exception">/jsps/exception.jsp</result>
+				<result name="main">/jsps/main.jsp</result>		
+				<result name="reply">/jsps/member/message/reply.jsp</result>				
+				<result name="message" type="redirectAction">
+				  <param name="namespace">/goodOrder</param>
+				  <param name="actionName">orderAction!myMessage.action</param>
+				</result>
+			</global-results>
+			<global-exception-mappings>
+				<exception-mapping result="exception" exception="java.Lang.Exception"></exception-mapping>
+			</global-exception-mappings>
+			
+		</package>
+		
+		<package name="goodsOrder" namespace="" extends="mainPackage">
+			<global-results>
+				<result name="index">/index.jsp</result>
+				<result name="exception">/jsps/exception.jsp</result>
+				<result name="main">/jsps/main.jsp</result>
+				<result name="login">/jsps/member/login.jsp</result>
+				<result name="message">/jsps/member/message/personal.jsp</result>				
+				<result name="list">/jsps/admin/order/list.jsp</result>
+				<result name="estimate">/jsps/member/goods/estimate.jsp</result>
+                <result name="payPage" type="redirectAction">
+				  <param name="namespace">/addrBook</param>
+				  <param name="actionName">addrAction!getMemberAddrs.action</param>
+				</result>
+			</global-results>
+			<global-exception-mappings>
+				<exception-mapping result="exception" exception="java.Lang.Exception"></exception-mapping>
+			</global-exception-mappings>
+			
+		</package>
+		
+		<package name="webmall" namespace="" extends="mainPackage">
+			<global-results>
+				<result name="index">/index.jsp</result>
+				<result name="exception">/jsps/exception.jsp</result>
+				<result name="main">/jsps/main.jsp</result>
+			</global-results>
+			<global-exception-mappings>
+				<exception-mapping result="exception" exception="java.Lang.Exception"></exception-mapping>
+			</global-exception-mappings>
+			
+		</package>
+		
+		<package name="member" namespace="" extends="mainPackage">
+			<global-results>
+				<result name="index">/index.jsp</result>
+				<result name="exception">/jsps/exception.jsp</result>
+				<result name="main">/jsps/main.jsp</result>
+				<result name="myInfo">/jsps/member/message/myInfo.jsp</result>	
+				<result name="otherInfo">/jsps/member/message/otherInfo.jsp</result>						
+				<result name="list">/jsps/admin/member/list.jsp</result>
+				<result name="login">/jsps/member/login.jsp</result>	
+				<result name="preUptPwd">/jsps/member/message/uptPwd.jsp</result>		
+				<result name="payPage" type="redirectAction">
+				  <param name="namespace">/addrBook</param>
+				  <param name="actionName">addrAction!getMemberAddrs.action</param>
+				</result>
+				<result name="message" type="redirectAction">
+				  <param name="namespace">/goodOrder</param>
+				  <param name="actionName">orderAction!myMessage.action</param>
+				</result>
+			</global-results>
+			<global-exception-mappings>
+				<exception-mapping result="exception" exception="java.Lang.Exception"></exception-mapping>
+			</global-exception-mappings>
+			
+		</package>
+		
+		<package name="orderItem" namespace="" extends="mainPackage">
+			<global-results>
+				<result name="index">/index.jsp</result>
+				<result name="exception">/jsps/exception.jsp</result>
+				<result name="main">/jsps/main.jsp</result>
+				<result name="shopCar">/jsps/member/goods/shop_car.jsp</result>
+			</global-results>
+			<global-exception-mappings>
+				<exception-mapping result="exception" exception="java.Lang.Exception"></exception-mapping>
+			</global-exception-mappings>
+			
+		</package>
+		
+		<package name="reply" namespace="" extends="mainPackage">
+			<global-results>
+				<result name="index">/index.jsp</result>
+				<result name="exception">/jsps/exception.jsp</result>
+				<result name="main">/jsps/main.jsp</result>
+				
+				<result name="login">/jsps/member/login.jsp</result>
+				<result name="detail" type="redirectAction">
+				  <param name="namespace">/goods</param>
+				  <param name="actionName">goodsAction!getEntity.action</param>
+				  <param name="goods_no">${goods.goodsNo}</param>
+				</result>
+				<result name="reply" type="redirectAction">
+				  <param name="namespace">/goodsComment</param>
+				  <param name="actionName">commentAction!getReply.action</param>
+				  <param name="commentNo">${reply.goodsComment.commentNo}</param>
+				</result>
+			</global-results>
+			<global-exception-mappings>
+				<exception-mapping result="exception" exception="java.Lang.Exception"></exception-mapping>
+			</global-exception-mappings>
+			
+		</package>
+	</struts>
